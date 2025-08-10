@@ -18,7 +18,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <h2 className="text-2xl font-semibold mb-6">Projects</h2>
-      <div className="space-y- bg-black/30 backdrop-blur-md" >
+      <div className="space-y-4 bg-black/30 backdrop-blur-md" >
         {projects.map(({ title, description, link }) => (
           <div key={title} className="p-6 border rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-bold text-indigo-600 mb-2">{title}</h3>

@@ -9,16 +9,15 @@ import GlassUI from './components/bar';
 
 function App() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-8">
+    <div className="">
       <Header />
-      <main className="space-y-20 mt-12">
+      <main className="space-y-20 mt-12 max-w-5xl mx-auto px-6 py-8">
         <About />
         <Projects />
         <Contact />
       </main>
       <Footer />
       <GlassUI></GlassUI>
-      
     </div>
   );
 }

@@ -4,8 +4,9 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import StudentPortfolio from './components/StudentPortfolio'
 import GlassUI from './components/bar';
+import Emphasis from  './components/emphasis';
+import Skills from './components/Skills.jsx';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <Header />
       <main className="space-y-20 mt-12 max-w-5xl mx-auto px-6 py-8">
         <About />
+        <Emphasis/>
         <Projects />
+        <Skills/>
         <Contact />
       </main>
       <Footer />
@@ -21,5 +24,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

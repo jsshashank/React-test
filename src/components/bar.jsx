@@ -1,33 +1,57 @@
 import React from 'react';
-
+import { University, Mail, Lightbulb, Palette, House } from 'lucide-react';
 
 export default function GlassUI() {
-  return (<>
+  const links = [
+    { href: '#about', icon: <House />, label: 'Home' },
+    { href: '#projects', icon: <Palette />, label: 'Projects' },
+    { href: '#skills', icon: <Lightbulb />, label: 'Skills' },
+    { href: '#education', icon: <University />, label: 'Education' },
+    { href: '#contact', icon: <Mail />, label: 'Contact' },
+  ];
+
+  return (
     <div
-      className="glass-ui fixed bottom-0 left-1/2 -translate-x-1/2 px-3 py-2  border-t-gray-200 border-opacity-70 items-center rounded-none w-full text-white text-lg flex justify-center gap-5"
+      className="
+        glass-ui 
+        fixed left-1/2 -translate-x-1/2 
+        px-3 py-2 
+        border-t-gray-200 border-opacity-70 
+        items-center 
+        text-white text-lg 
+        flex justify-center gap-5
+        w-full rounded-none
+        md:w-auto md:rounded-full md:bottom-8
+        bottom-0
+      "
       style={{
         background: 'rgba(0,0,0,0.5)',
         WebkitBackdropFilter: 'blur(8px)',
         backdropFilter: 'blur(6px)',
       }}
     >
-
       <div className="flex items-center gap-2 px-4">
-        <a href="#image" className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg">
-          <i className="fa-solid fa-home"></i></a>
-        <a href="#about" className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg">     <i className="fa-solid fa-user"></i>
-        </a>
-        <a href="#ratio2v" className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg ">    <i className="fa-solid fa-search"></i>
-        </a>
-        <a href="#help" className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg">
-          <i className="fa-solid fa-bell"></i>
-        </a>
-        <a href="#help" className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg">
-          <i className="fa-solid fa-share"></i>
-        </a>
+        {links.map(({ href, icon, label }) => (
+          <div key={label} className="relative group">
+            <a
+              href={href}
+              className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg flex items-center justify-center"
+            >
+              {icon}
+            </a>
+            {/* Tooltip */}
+            <span className="
+              absolute bottom-full mb-2 left-1/2 -translate-x-1/2 
+              text-xs bg-black/80 text-white px-2 py-1 rounded 
+              opacity-0 group-hover:opacity-100 
+              transition-opacity duration-200 pointer-events-none
+            ">
+              {label}
+            </span>
+          </div>
+        ))}
       </div>
-
     </div>
-  </>
   );
 }
+

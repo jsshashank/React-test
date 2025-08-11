@@ -6,17 +6,20 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import GlassUI from './components/bar';
 import Emphasis from  './components/emphasis';
-import Skills from './components/Skills.jsx';
+import Skills from './components/Skills';
+import Hero from './components/Hero';
+import EduExp from './components/Education';
 
 function App() {
   return (
     <div className="">
-      <Header />
+      <Header/>
       <main className="space-y-20 mt-12 max-w-5xl mx-auto px-6 py-8">
         <About />
         <Emphasis/>
         <Projects />
         <Skills/>
+        <EduExp/>
         <Contact />
       </main>
       <Footer />

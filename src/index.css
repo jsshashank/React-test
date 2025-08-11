@@ -3,8 +3,14 @@
 @tailwind utilities;
 @font-face {
   font-family: 'CovesLight';
-  src: url('.src\assets\fonts\CovesLight.otf') format('otf');
-     
+  src: url('.src\assets\fonts\CovesLight.otf') format('otf');  
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CovesLight';
+  src: url('.src\assets\fonts\JMH Typewriter.otf') format('otf');  
   font-weight: normal;
   font-style: normal;
   font-display: swap;

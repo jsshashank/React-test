@@ -1,11 +1,8 @@
-// Hero.jsx
 import React from "react";
-import heroImage from "../assets/blue_grad.jpeg";
 
 export default function Hero() {
   return (
     <section className="relative w-full h-[80vh] rounded-[0.5rem] overflow-hidden shadow-lg">
-      {/* Background image */}
       <img
         src={heroImage}
         alt="Nature meets city"
@@ -14,7 +11,6 @@ export default function Hero() {
 
          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
 
-      {/* Text + button on blurred side */}
       <div className="absolute pt-10 w- flex flex-col px-10 text-white">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Transform your digital presence.

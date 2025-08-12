@@ -1,5 +1,9 @@
 import React from 'react';
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react'; // lucide icons
+import { Briefcase, GraduationCap, Calendar } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const experiences = [
   {
@@ -42,19 +46,19 @@ const education = [
 
 export default function EduExp() {
   return (
-    <section className="py-12 space-y-12">
+    <section  className="py-12 space-y-12">
       {/* Experience */}
-      <div>
-        <h2 className="text-2xl font-Playfair font-bold flex items-center gap-2 mb-6">
+      <div data-aos="fade-up">
+        <h2 className="text-2xl font-Playfair font-bold flex items-center mb-6 gap-2">
           <Briefcase className="w-6 h-6" /> Experience & Internships
         </h2>
-        <div className="space-y-4">
+        <div data-aos="fade-up" className="space-y-4">
           {experiences.map((exp) => (
             <div
               key={exp.title}
               className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm"
             >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+              <div  className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                 <div>
                   <h3 className="font-semibold text-lg">{exp.title}</h3>
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -79,8 +83,8 @@ export default function EduExp() {
       </div>
 
       {/* Education */}
-      <div>
-        <h2 id="education" className="text-2xl font-Playfair font-bold  flex items-center gap-2 mb-6">
+      <div data-aos="fade-up">
+        <h2 id="education" className="text-2xl font-Playfair font-bold  flex items-center mb-6 gap-2">
           <GraduationCap className="w-6 h-6" /> Education
         </h2>
         <div className="space-y-4">

@@ -1,5 +1,9 @@
 import React from 'react';
-import { Brain, Cpu, Code2, Wrench, Network ,Lightbulb} from 'lucide-react';
+import { Brain, Cpu, Code2, Wrench, Network, Lightbulb } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const skills = [
   {
@@ -50,14 +54,21 @@ const skills = [
 ];
 
 export default function Skills() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true,
+    });
+  }, []);
   return (
-    <section id="skills" className="py-12">
-      <h2 className="text-2xl font-Playfair  font-bold mb-8 flex items-center">
+    <section data-aos="fade-up" id="skills" className="py-12">
+      <h2 className="text-2xl font-Playfair  font-bold mb-6 flex items-center gap-2">
         <Lightbulb />Skills
       </h2>
-      <div className="space-y-4">
+      <div  className="space-y-4">
         {skills.map(({ icon: Icon, title, items }) => (
-          <div
+          <div data-aos="fade-up"
             key={title}
             className="p-6 border rounded-lg bg-white hover:shadow-lg transition-shadow"
           >

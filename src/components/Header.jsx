@@ -12,15 +12,15 @@ export default function Header() {
       }}
     >
       <div className="max-w-5xl mx-auto px-6 flex justify-between items-center py-2 rounded-lg text-black">
-        {/* Logo */}
+        {/* header logo */}
         <h1 className="text-[20px] font-Playfair Display font-medium m-0">
           Portfolio.
         </h1>
 
-       
 
-        {/* Social Icons */}
-        <div className="flex items-center space-x-4 gap-4 px-3">
+
+        {/* right header icons */}
+        <div className="flex items-center space-x-4 gap-3">
           <a
             href="https://github.com/yourusername"
             target="_blank"

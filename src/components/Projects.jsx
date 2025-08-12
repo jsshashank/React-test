@@ -1,5 +1,9 @@
 import React from "react";
-import { ArrowRight,Palette } from "lucide-react";
+import { ArrowRight, Palette } from "lucide-react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const projects = [
   {
@@ -22,21 +26,19 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-16 bg-gray-5">
-      <h2 id="projects" className="font-Playfair text-3xl font-bold mb-12 flex items-center"><Palette />Projects</h2>
+    <section data-aos="fade-up"  className="py-16 bg-gray-5">
+      <h2 id="projects" className="font-Playfair text-2xl font-bold mb-6 flex items-center gap-2"><Palette />Projects</h2>
       <div className="space-y-16 ">
         {projects.map((project, index) => (
-          <div
+          <div data-aos="fade-up"
             key={project.title}
-            className={`grid grid-cols-1 md:grid-cols-2 bg-white rounded-md  border border-gray-300 ${
-              index % 2 !== 0 ? "md:direction-rtl" : ""
-            }`}
-          >
-            {/* Image */}
-            <div
-              className={`w-full h-full border-4 border-white ${
-                index % 2 !== 0 ? "md:order-2" : ""
+            className={`grid grid-cols-1 md:grid-cols-2 bg-white rounded-md  border border-gray-300 ${index % 2 !== 0 ? "md:direction-rtl" : ""
               }`}
+          >
+            {/* images */}
+            <div 
+              className={`w-full h-full border-4 border-white ${index % 2 !== 0 ? "md:order-2" : ""
+                }`}
             >
               <img
                 src={project.image}
@@ -45,14 +47,14 @@ export default function Projects() {
               />
             </div>
 
-            {/* Text */}
+            {/* text */}
             <div className="flex flex-col justify-center p-6">
               <h3 className="text-2xl font-semibold mb-4 font-Playfair">
                 {project.title}
               </h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
 
-              {/* Tags */}
+              {/*tags*/}
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tags.map((tag) => (
                   <span
@@ -64,7 +66,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Link */}
+              {/* link */}
               <a
                 href={project.link}
                 className="inline-flex items-center text-[#303036] font-medium hover:underline"

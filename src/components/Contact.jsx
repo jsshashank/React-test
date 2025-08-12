@@ -1,18 +1,19 @@
 import React from 'react';
-import { Github, Linkedin, Mail ,House} from 'lucide-react';
+import { Github, Linkedin, Mail, House } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-12 ">
-      <h2 className="text-2xl font-Playfair font-bold mb-8 flex items-center">
-          <House />  Contact Me
-        </h2>
+    <section data-aos="fade-up" id="contact" className="py-12 ">
+      <h2 className="text-2xl font-Playfair font-bold mb-6 flex items-center gap-2">
+        <House />  Contact Me
+      </h2>
 
       <div className="max-w-5xl mx-auto bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
-        {/* Heading outside content box for better spacing */}
-        
-
-        {/* Contact details */}
+        {/* Contact*/}
         <ul className="list-disc list-inside text-gray-700 space-y-3 font-medium max-w-md ">
           <li>
             Email:{' '}
@@ -36,7 +37,7 @@ export default function Contact() {
           </li>
         </ul>
 
-        {/* Social icons centered with gap */}
+        {/* icons,links */}
         <div className="flex justify-center gap-10 mt-8">
           <a
             href="https://github.com/yourprofile"
@@ -65,8 +66,6 @@ export default function Contact() {
           >
             <Mail className="w-6 h-6 text-red-600" />
           </a>
-
-          {/* You can add LeetCode, Kaggle icons similarly */}
         </div>
       </div>
     </section>

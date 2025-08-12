@@ -20,7 +20,7 @@ export default function Header() {
        
 
         {/* Social Icons */}
-        <div className="flex items-center space-x-4 gap-5 px-6">
+        <div className="flex items-center space-x-4 gap-4 px-3">
           <a
             href="https://github.com/yourusername"
             target="_blank"
@@ -35,7 +35,7 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-5 h-5 hover:text-blue-600 transition-colors" />
+            <Linkedin className="w-5 h-5 text-blue-600 hover:text-blue-600 transition-colors" />
           </a>
         </div>
       </div>

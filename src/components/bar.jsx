@@ -16,17 +16,17 @@ export default function GlassUI() {
         glass-ui 
         fixed left-1/2 -translate-x-1/2 
         px-3 py-2 
-        border-t-gray-300 border-opacity-70 
+        border-t-gray-100 border-opacity-50 
         items-center 
-        text-black text-lg 
+        text-white text-lg 
         flex justify-center gap-5
         w-full rounded-none
         md:w-auto md:rounded-full md:bottom-8
         bottom-0
-        border border-gray-300
+        border border-gray-100
       "
       style={{
-        background: 'rgba(255,255,255,0.5)',
+        background: 'rgba(1,1,1,0.5)',
         WebkitBackdropFilter: 'blur(8px)',
         backdropFilter: 'blur(6px)',
       }}

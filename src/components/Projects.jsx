@@ -7,7 +7,7 @@ const projects = [
     description:
       "A comprehensive brand identity design for a luxury skincare brand, including logo, packaging, and digital presence.",
     tags: ["Branding", "Design", "Identity"],
-    image: "https://media.istockphoto.com/id/1957022961/photo/digital-brain-hologram-hud-artificial-intelligence-ai-machine-deep-learning-business.jpg?s=612x612&w=0&k=20&c=8Hq19O6HD2-J5aAsJnq7qumBG_4nntZfMSMqSrmYuCY=",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     link: "#",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     description:
       "Complete UX/UI redesign for an e-commerce platform, focusing on improving user experience and conversion rates.",
     tags: ["UI/UX", "Web Design", "E-commerce"],
-    image: "https://media.istockphoto.com/id/1957022961/photo/digital-brain-hologram-hud-artificial-intelligence-ai-machine-deep-learning-business.jpg?s=612x612&w=0&k=20&c=8Hq19O6HD2-J5aAsJnq7qumBG_4nntZfMSMqSrmYuCY=",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     link: "#",
   },
 ];
@@ -67,7 +67,7 @@ export default function Projects() {
               {/* Link */}
               <a
                 href={project.link}
-                className="inline-flex items-center text-blue-600 font-medium hover:underline"
+                className="inline-flex items-center text-[#303036] font-medium hover:underline"
               >
                 View Project <ArrowRight className="w-4 h-4 ml-1" />
               </a>

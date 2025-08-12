@@ -3,7 +3,7 @@ import { University, Mail, Lightbulb, Palette, House } from 'lucide-react';
 
 export default function GlassUI() {
   const links = [
-    { href: '#about', icon: <House />, label: 'Home' },
+    { href: '#top', icon: <House />, label: 'Home' },
     { href: '#projects', icon: <Palette />, label: 'Projects' },
     { href: '#skills', icon: <Lightbulb />, label: 'Skills' },
     { href: '#education', icon: <University />, label: 'Education' },
@@ -16,16 +16,17 @@ export default function GlassUI() {
         glass-ui 
         fixed left-1/2 -translate-x-1/2 
         px-3 py-2 
-        border-t-gray-200 border-opacity-70 
+        border-t-gray-300 border-opacity-70 
         items-center 
-        text-white text-lg 
+        text-black text-lg 
         flex justify-center gap-5
         w-full rounded-none
         md:w-auto md:rounded-full md:bottom-8
         bottom-0
+        border border-gray-300
       "
       style={{
-        background: 'rgba(0,0,0,0.5)',
+        background: 'rgba(255,255,255,0.5)',
         WebkitBackdropFilter: 'blur(8px)',
         backdropFilter: 'blur(6px)',
       }}

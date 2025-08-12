@@ -20,7 +20,7 @@ export default function Header() {
        
 
         {/* Social Icons */}
-        <div className="flex items-center space-x-4 gap-5">
+        <div className="flex items-center space-x-4 gap-5 px-6">
           <a
             href="https://github.com/yourusername"
             target="_blank"

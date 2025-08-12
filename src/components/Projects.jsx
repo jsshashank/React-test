@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight,Palette } from "lucide-react";
 
 const projects = [
   {
@@ -22,19 +22,19 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-16 bg-gray-50">
-      <h2 className="font-Playfair text-3xl font-bold mb-12">Projects</h2>
-      <div className="space-y-16">
+    <section className="py-16 bg-gray-5">
+      <h2 id="projects" className="font-Playfair text-3xl font-bold mb-12 flex items-center"><Palette />Projects</h2>
+      <div className="space-y-16 ">
         {projects.map((project, index) => (
           <div
             key={project.title}
-            className={`grid grid-cols-1 md:grid-cols-2 ${
+            className={`grid grid-cols-1 md:grid-cols-2 bg-white rounded-md  border border-gray-300 ${
               index % 2 !== 0 ? "md:direction-rtl" : ""
             }`}
           >
             {/* Image */}
             <div
-              className={`w-full h-full ${
+              className={`w-full h-full border-4 border-white ${
                 index % 2 !== 0 ? "md:order-2" : ""
               }`}
             >

@@ -10,7 +10,7 @@ export default function Footer() {
       flex justify-between items-center
     ">
       <span>© {new Date().getFullYear()} Your Name. All rights reserved.</span>
-      <span className="text-gray-500">Last revised on August-2025</span>
+      <span className="text-gray-500">Last revised, August-2025</span>
     </footer>
   );
 }

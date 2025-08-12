@@ -17,7 +17,7 @@ function App() {
       <main
         className="
           space-y-20 mt-12 
-          w-full max-w-full px-4 py-8 
+          w-full max-w-full px-4 py-8
           sm:max-w-2xl sm:px-6 
           md:max-w-4xl 
           lg:max-w-5xl 

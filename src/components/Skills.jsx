@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Cpu, Code2, Wrench, Network } from 'lucide-react';
+import { Brain, Cpu, Code2, Wrench, Network ,Lightbulb} from 'lucide-react';
 
 const skills = [
   {
@@ -53,7 +53,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-12">
       <h2 className="text-2xl font-Playfair  font-bold mb-8 flex items-center">
-        Skills
+        <Lightbulb />Skills
       </h2>
       <div className="space-y-4">
         {skills.map(({ icon: Icon, title, items }) => (

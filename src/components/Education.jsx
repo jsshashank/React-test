@@ -80,7 +80,7 @@ export default function EduExp() {
 
       {/* Education */}
       <div>
-        <h2 className="text-2xl font-Playfair font-bold flex items-center gap-2 mb-6">
+        <h2 id="education" className="text-2xl font-Playfair font-bold  flex items-center gap-2 mb-6">
           <GraduationCap className="w-6 h-6" /> Education
         </h2>
         <div className="space-y-4">

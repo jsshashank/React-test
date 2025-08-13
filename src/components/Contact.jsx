@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, House } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section data-aos="fade-up" id="contact" className="py-12 ">
       <h2 className="text-2xl font-Playfair font-bold mb-6 flex items-center gap-2">
-        <House />  Contact Me
+        <Mail />  Contact Me
       </h2>
 
       <div className="max-w-5xl mx-auto bg-white rounded-lg border border-gray-200 p-8 shadow-sm">

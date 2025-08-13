@@ -22,6 +22,12 @@ module.exports = {
         Typewriter: ['JMH Typewriter']
     },
   },
+   screens: {
+      sm: '428px',   // small devices
+      md: '800px',   // tablets
+      lg: '1100px',  // laptops
+      xl: '1400px',  // desktops
+    },
   plugins: [],
 }
 }

@@ -15,3 +15,57 @@
   font-style: normal;
   font-display: swap;
 }
+
+@media (pointer: fine) {
+  html, body, #root {
+    cursor: none;
+  }
+}
+
+/* Keep the system cursor on touch devices */
+@media (pointer: coarse) {
+  html, body, #root {
+    cursor: auto;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes borderTail {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container with animated border */
+.border-tail {
+  position: relative;
+  border-radius: inherit;
+}
+
+.border-tail::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* thickness of glow offset */
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 200, 255, 0.8) 20deg,
+    transparent 40deg,
+    transparent 360deg
+  );
+  animation: borderTail 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

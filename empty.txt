@@ -1,3 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#FFF" stroke="#000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>
+
+
+
 import React from 'react';
 import { User, ArrowRight, TrendingUpDown, Download } from 'lucide-react';
 import Typewriter from 'typewriter-effect';
@@ -5,14 +9,11 @@ import { useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 export default function Hero() {
   const [showCursor, setShowCursor] = useState(true);
 
-  
-
   return (
-    <section id="hero" className="mt-8 py-[120px]">
+    <section id="hero" className="mt-8 py-[120px] border-trail">
       <div data-aos="fade-up"className="max-w-5xl mx-auto bg-white rounded-lg border border-gray-200 shadow-sm p-8 flex flex-col md:flex-row items-center gap-8">
         {/* pfp */}
         <div className="flex-shrink-0">

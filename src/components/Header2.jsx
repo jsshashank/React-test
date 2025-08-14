@@ -15,15 +15,21 @@ export default function Header() {
       }}
     >
       <div className="max-w-5xl mx-auto px-6 flex justify-between items-center py-2 rounded-lg text-black">
-        <h1 className="text-[20px] font-Playfair Display font-medium m-0">Portfolio.</h1>
+        <a className="text-[20px] font-Playfair Display font-medium m-0 hover:text-blue-800">Portfolio.</a>
 
         {/* Desktop view */}
-        <nav className="hidden md:flex space-x-6 text-black font-sm">
-          <Brain /><a href="#about" className="hover:underline">
+        <nav className="hidden md:flex space-x-6 text-black font-sm font-Playfair">
+          <a href="#hero" className="hover:underline">
             About
           </a>
           <a href="#projects" className="hover:underline">
             Projects
+          </a>
+          <a href="#skills" className="hover:underline">
+            Skills
+          </a>
+          <a href="#education" className="hover:underline">
+            Education
           </a>
           <a href="#contact" className="hover:underline">
             Contact
@@ -58,12 +64,12 @@ export default function Header() {
 
       {/*dropdown menu */}
       <nav
-        className={`md:hidden bg-white bg-opacity-50 backdrop-blur-md overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${open ? 'max-h-40 opacity-30' : 'max-h-0 opacity-0'
+        className={`md:hidden bg-white bg-opacity-50 backdrop-blur-md overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${open ? 'max-h-40 opacity-80' : 'max-h-0 opacity-0'
           }`}
       >
-        <div className="flex flex-col space-y-3 px-6 py-4 max-w-xs mx-auto">
+        <div className="flex flex-col space-y-3 px-6 py-4 max-w-xs mx-auto font-Playfair">
           <a
-            href="#about"
+            href="#hero"
             className="text-black font-semibold hover:underline block text-center w-full"
             onClick={() => setOpen(false)}
           >
@@ -75,6 +81,20 @@ export default function Header() {
             onClick={() => setOpen(false)}
           >
             Projects
+          </a>
+          <a
+            href="#skills"
+            className="text-black font-semibold hover:underline block text-center w-full"
+            onClick={() => setOpen(false)}
+          >
+            Skills
+          </a>
+          <a
+            href="#education"
+            className="text-black font-semibold hover:underline block text-center w-full"
+            onClick={() => setOpen(false)}
+          >
+            Education
           </a>
           <a
             href="#contact"

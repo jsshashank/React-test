@@ -23,7 +23,7 @@ export default function GlassUI() {
         w-full rounded-none
         md:w-auto md:rounded-full md:bottom-8
         bottom-0
-        border border-gray-100
+        
       "
       style={{
         background: 'rgba(1,1,1,0.5)',

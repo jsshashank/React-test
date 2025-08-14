@@ -30,8 +30,9 @@ function App() {
         <EduExp />
         <Contact />
       </main>
-      <Footer />
       <GlassUI/>
+      <Footer />
+      
     </div>
   );
 }

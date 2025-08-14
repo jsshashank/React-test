@@ -1,14 +1,31 @@
-import React from 'react';
-import { University, Mail, Lightbulb, Palette, House } from 'lucide-react';
+import React, { useState } from 'react';
+import { Share, Moon, Sun } from 'lucide-react';
 
 export default function GlassUI() {
-  const links = [
-    { href: '#top', icon: <House />, label: 'Home' },
-    { href: '#projects', icon: <Palette />, label: 'Projects' },
-    { href: '#skills', icon: <Lightbulb />, label: 'Skills' },
-    { href: '#education', icon: <University />, label: 'Education' },
-    { href: '#contact', icon: <Mail />, label: 'Contact' },
-  ];
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: 'Check out my site!',
+          text: 'Here is my portfolio website.',
+          url: window.location.href,
+        })
+        .catch((err) => console.error('Share failed:', err));
+    } else {
+      alert('Sharing not supported on this browser.');
+    }
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => !prev);
+    if (!darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
 
   return (
     <div
@@ -16,43 +33,49 @@ export default function GlassUI() {
         glass-ui 
         fixed left-1/2 -translate-x-1/2 
         px-3 py-2 
-        border-t-gray-100 border-opacity-50 
+        border border-gray-300  
         items-center 
-        text-white text-lg 
+        text-gray-800 text-lg 
         flex justify-center gap-5
         w-full rounded-none
         md:w-auto md:rounded-full md:bottom-8
-        bottom-0
-        
+        bottom-0 z-50
       "
       style={{
-        background: 'rgba(1,1,1,0.5)',
+        background: 'rgba(255,255,255,0.5)',
         WebkitBackdropFilter: 'blur(8px)',
         backdropFilter: 'blur(6px)',
       }}
     >
-      <div className="flex items-center gap-2 px-4">
-        {links.map(({ href, icon, label }) => (
-          <div key={label} className="relative group">
-            <a
-              href={href}
-              className="bg-white/6 hover:bg-white/10 px-3 py-1 rounded-lg flex items-center justify-center"
-            >
-              {icon}
-            </a>
-            {/* Tooltip */}
-            <span className="
-              absolute bottom-full mb-2 left-1/2 -translate-x-1/2 
-              text-xs bg-black/80 text-white px-2 py-1 rounded 
-              opacity-0 group-hover:opacity-100 
-              transition-opacity duration-200 pointer-events-none
-            ">
-              {label}
-            </span>
-          </div>
-        ))}
+      <div className="flex items-center gap-4 px-4">
+        {/* Home Image */}
+        <a
+          href="#hero"
+          className="w-9 h-9 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg"
+        >
+          <img
+            src="https://i.pinimg.com/736x/28/48/fa/2848fa2ea29db6c28cf5252fc3eea0a6.jpg"
+            alt="Home"
+            className="w-full h-full object-cover"
+          />
+        </a>
+
+        {/* Share Button */}
+        <button
+          onClick={handleShare}
+          className="bg-white/10 hover:bg-white/20 p-2 rounded-lg"
+        >
+          <Share />
+        </button>
+
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={toggleDarkMode}
+          className="bg-white/10 hover:bg-white/20 p-2 rounded-lg"
+        >
+          {darkMode ? <Sun /> : <Moon />}
+        </button>
       </div>
     </div>
   );
 }
-

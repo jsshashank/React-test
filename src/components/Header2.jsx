@@ -14,8 +14,8 @@ export default function Header() {
         backdropFilter: 'blur(5px)',
       }}
     >
-      <div className="max-w-5xl mx-auto px-6 flex justify-between items-center py-2 rounded-lg text-black">
-        <a className="text-[20px] font-Playfair Display font-medium m-0 hover:text-blue-800">Portfolio.</a>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center py-2 rounded-lg text-black">
+        <a href="Hero" className="text-[20px] font-Playfair Display font-medium m-0 hover:text-blue-800">Portfolio.</a>
 
         {/* Desktop view */}
         <nav className="hidden md:flex space-x-6 text-black font-sm font-Playfair">

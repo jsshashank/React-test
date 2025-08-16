@@ -1,19 +1,27 @@
 import React from 'react';
 import { User, ArrowRight, TrendingUpDown, Download } from 'lucide-react';
 import Typewriter from 'typewriter-effect';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useTiltEffect } from "./hooks/useTiltEffect";
+import { gsap } from "gsap";
+
 
 export default function Hero() {
   const [showCursor, setShowCursor] = useState(true);
 
+  const imgRef = useRef(null);
+  useTiltEffect(imgRef, 30);
+
+
+
+
   return (
     <section id="hero" className="mt-8 py-[120px]">
-      <div data-aos="fade-up"className="max-w-5xl mx-auto bg-white rounded-lg border border-gray-200 shadow-sm p-8 flex flex-col md:flex-row items-center gap-8">
+      <div data-aos="fade-up" className="max-w-5xl mx-auto bg-white rounded-lg border border-gray-200 shadow-sm p-8 flex flex-col md:flex-row items-center gap-8">
         {/* pfp */}
         <div className="flex-shrink-0">
-          <div className="w-32 h-32 rounded-full overflow-hidden border border-gray-300 shadow-sm">
+          <div ref={imgRef} className="w-32 h-32 rounded-full overflow-hidden border border-gray-300 shadow-sm cursor-pointer">
             <img
               src="https://i.pinimg.com/736x/28/48/fa/2848fa2ea29db6c28cf5252fc3eea0a6.jpg" // Replace with your image path
               alt="Your Name"
@@ -29,7 +37,7 @@ export default function Hero() {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('J Sai Shashank')
+                    .typeString('alex')
                     .callFunction(() => {
                       const cursor = document.querySelector('.Typewriter__cursor');
                       if (cursor) cursor.style.display = 'none';
@@ -42,7 +50,7 @@ export default function Hero() {
           <p className="text-gray-700 mb-6">
             Enthusiastic Computer Science student with a strong foundation in {' '}
             <strong>AI, Machine Learning, and Web Development</strong>. Passionate about leveraging data-driven insights to solve real-world problems. Seeking an
- internship/full-time role to apply my skills in data analysis, machine learning, and software development.
+            internship/full-time role to apply my skills in data analysis, machine learning, and software development.
           </p>
 
           {/* buttons*/}

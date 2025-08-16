@@ -8,7 +8,6 @@ import Skills from './components/Skills';
 import Hero from './components/Hero';
 import EduExp from './components/Education';
 import CustomCursor from './components/CustomCursor'
-
 function App() {
   return (
     <div>
@@ -16,11 +15,11 @@ function App() {
       <Header2 />
       <main
         className="
-          space-y-5 mt-12 
+          space-y-3 mt-12 
           w-full max-w-full px-4 py-8
           sm:px-6 
           md:max-w-4xl 
-          lg:max-w-5xl 
+          lg:max-w-7xl 
           mx-auto
         "
       >

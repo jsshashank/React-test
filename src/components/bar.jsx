@@ -9,7 +9,7 @@ export default function GlassUI() {
       navigator
         .share({
           title: 'Check out my site!',
-          text: 'Here is my portfolio website.',
+          text: 'Check out this portfolio website.',
           url: window.location.href,
         })
         .catch((err) => console.error('Share failed:', err));
@@ -51,7 +51,7 @@ export default function GlassUI() {
         {/* Home Image */}
         <a
           href="#hero"
-          className="w-9 h-9 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg"
+          className="w-9 h-9 rounded-full overflow-hidden border-2 border-gray-500 shadow-lg "
         >
           <img
             src="https://i.pinimg.com/736x/28/48/fa/2848fa2ea29db6c28cf5252fc3eea0a6.jpg"

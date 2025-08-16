@@ -66,7 +66,7 @@ export default function Skills() {
       <h2 className="text-2xl font-Playfair  font-bold mb-6 flex items-center gap-2">
         <Lightbulb />Skills
       </h2>
-      <div  className="space-y-4">
+      <div className="grid grid-cols-2 gap-4">
         {skills.map(({ icon: Icon, title, items }) => (
           <div data-aos="fade-up"
             key={title}

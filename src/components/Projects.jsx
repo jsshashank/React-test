@@ -28,7 +28,7 @@ export default function Projects() {
   return (
     <section data-aos="fade-up"  className="py-16 bg-gray-5">
       <h2 id="projects" className="font-Playfair text-2xl font-bold mb-6 flex items-center gap-2"><Palette />Projects</h2>
-      <div className="space-y-16 ">
+      <div className="space-y-16">
         {projects.map((project, index) => (
           <div data-aos="fade-up"
             key={project.title}

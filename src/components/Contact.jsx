@@ -12,7 +12,7 @@ export default function Contact() {
         <Mail />  Contact Me
       </h2>
 
-      <div className="max-w-5xl mx-auto bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
+      <div className="max-w-7xl mx-auto bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
         {/* Contact*/}
         <ul className="list-disc list-inside text-gray-700 space-y-3 font-medium max-w-md ">
           <li>

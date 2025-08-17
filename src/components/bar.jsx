@@ -48,6 +48,14 @@ export default function GlassUI() {
       }}
     >
       <div className="flex items-center gap-4 px-4">
+
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={toggleDarkMode}
+          className="bg-white/10 hover:bg-white/20 p-2 rounded-lg"
+        >
+          {darkMode ? <Sun /> : <Moon />}
+        </button>
         {/* Home Image */}
         <a
           href="#hero"
@@ -68,13 +76,8 @@ export default function GlassUI() {
           <Share />
         </button>
 
-        {/* Dark Mode Toggle */}
-        <button
-          onClick={toggleDarkMode}
-          className="bg-white/10 hover:bg-white/20 p-2 rounded-lg"
-        >
-          {darkMode ? <Sun /> : <Moon />}
-        </button>
+
+
       </div>
     </div>
   );

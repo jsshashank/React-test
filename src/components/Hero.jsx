@@ -37,7 +37,7 @@ export default function Hero() {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('alex')
+                    .typeString('J Shashank')
                     .callFunction(() => {
                       const cursor = document.querySelector('.Typewriter__cursor');
                       if (cursor) cursor.style.display = 'none';
